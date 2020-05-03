@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>State</th>
+        <th>Active Cases</th>
+        <th>Confirmed Cases</th>
+        <th>Deaths Confirmed </th>
+        <th>Recovered</th>
+        <th>Last Updated </th>
+      </tr>
+    </thead>
+    <tbody *ngIf= 'statsData' >
+      <tr  *ngFor='let data of statsData.statewise'>
+        
+        <td *ngIf='data.state!= "Total"'><a style="color:darkslategray;" [routerLink]="['/dashboard/stats', data.state]" ><b>{{data.state}} ({{data.statecode}})</b></a></td>
+        <td *ngIf='data.state== "Total"'><a style="color:darkslategray;" [routerLink]="['/dashboard']" disabled><b>{{data.state}} ({{data.statecode}})</b></a></td>
+        <td>{{data.active}}</td>
+        <td>{{data.confirmed}}  (<b style="color:  brown;"> + {{data.deltaconfirmed}}</b> )</td>
+        <td>{{data.deaths}} (<b style="color:coral"> + {{data.deltadeaths}}</b> )</td>
+        <td>{{data.recovered}}(<b style="color:forestgreen;"> + {{data.deltarecovered}}</b> )</td>
+        <td>{{data.lastupdatedtime}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+  

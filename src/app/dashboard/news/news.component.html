@@ -1,0 +1,35 @@
+
+<div>
+<div *ngFor ="let news of allnews">
+  
+  <hr>
+<div class="row">
+  <div class="col-md-3">
+    <img [src]="news.image" class="rounded" style="width:300px;height:200px;"  />
+  </div>
+  
+  <div class="col-md-9 card">
+    <div class="card-block">
+      
+      <h1 class="card-text">
+        {{ news.title }}
+      </h1>
+      <h3>{{news.description}}</h3>
+      <h6 style="color: dimgray;">
+        {{news.summary}}
+  
+      </h6>
+      <button type="button" class="btn btn-outline-secondary mr-2" placement="top"
+      [ngbPopover]="news.details" popoverTitle="Details"> click here for details</button>
+      <span class="date-posted">
+        {{ news.newsDate | date: 'longDate' }}
+      </span>
+      
+</div>
+
+<hr/>
+ 
+</div>
+
+</div>
+<br>

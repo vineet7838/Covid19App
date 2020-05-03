@@ -1,0 +1,15 @@
+<app-portal-header></app-portal-header>
+<nav class='navbar navbar-expand-sm  ' >
+	<ul class='navbar-nav nav-pills '>
+	<li class='nav-item active' ><a class='nav-link' [routerLink]="['stats']" routerLinkActive='active'>Covid Statistics</a>
+	</li>
+	  <li class='nav-item'><a class='nav-link' [routerLink]="['news']" routerLinkActive='active'>Latest News</a>
+	  </li>
+	  <li class='nav-item'><a class='nav-link' [routerLink]="['precautions']" routerLinkActive='active'>Precautions</a>
+      </li>
+      <li *ngIf ="isLoggedIn" class='nav-item'><a class='nav-link' [routerLink]="['addpost']" routerLinkActive='active'>Post News</a>
+	  </li>
+
+  </ul>
+  </nav>
+<router-outlet></router-outlet>

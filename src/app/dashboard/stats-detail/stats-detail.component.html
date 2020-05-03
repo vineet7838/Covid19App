@@ -1,0 +1,33 @@
+<table *ngIf= 'districtsData.length !=0'  class="table table-bordered">
+    <thead>
+      <tr>
+        <th>District Name<p>(Notes if any)</p></th>
+        <th>Active</th>
+        <th>Confirmed Cases</th>
+        <th>Deaths Confirmed </th>
+        <th>Recovered</th>
+      </tr>
+    </thead>
+    <tbody >
+      <tr  *ngFor='let data of districtsData'>
+        
+        <td><a style="color:darkslategray;"><b>{{data.districtname}} <p *ngIf='data.districtData.notes'> ({{data.districtData.notes}})</p></b></a></td>
+        <td>{{data.districtData.active}}</td>
+        <td>{{data.districtData.confirmed}}  (<b style="color:  brown;"> + {{data.districtData.delta.confirmed}}</b> )</td>
+        <td>{{data.districtData.deceased}} (<b style="color:coral"> + {{data.districtData.delta.deceased}}</b> )</td>
+        <td>{{data.districtData.recovered}}(<b style="color:forestgreen;"> + {{data.districtData.delta.recovered}}</b> )</td>
+      </tr>
+     
+    </tbody>
+    <div>
+        <button type="button" mat-raised-button color="accent" (click)="goBack()">Go to Home page</button>
+      </div>
+  </table>
+
+  
+<div  *ngIf= 'districtsData.length == 0' class="jumbotron">
+    <h1> No data for this district or it belongs to total cases option :( </h1>
+    <div>
+      <button type="button" mat-raised-button color="accent" (click)="goBack()">Go to Home page</button>
+    </div>
+</div>

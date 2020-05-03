@@ -1,0 +1,7 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+       <h1>{{pageTitle}}</h1>
+<div *ngIf="isLoggedIn ; else elseBlock"><button   type="button" mat-button color="accent" (click)="logout()" ><mat-icon>account_circle</mat-icon>   {{username | uppercase}}</button></div>
+<ng-template #elseBlock><button  type="button" mat-button color="green" (click)="login()" ><mat-icon>account_circle</mat-icon>Login</button></ng-template>
+</mat-toolbar-row>
+</mat-toolbar>

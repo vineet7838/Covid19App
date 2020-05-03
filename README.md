@@ -11,8 +11,8 @@ Website Link: http://covidapp19-vineet.surge.sh/dashboard
 - Login functionality
 
 Default Credentials of Login
-Username: admin
-Password: Admin@1234
+## Username: admin
+## Password: Admin@1234
 
 Functionalities:
 - OnRefresh the user will not logout from the portal 

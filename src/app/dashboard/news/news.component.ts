@@ -17,6 +17,7 @@ export class NewsComponent implements OnInit {
 
     this.listAllNews();
   }
+  // to get all the news details
   listAllNews() {
     this.newsService.getNewsDetails().subscribe(data => {
             this.allnews = data;

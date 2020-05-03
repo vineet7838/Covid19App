@@ -32,7 +32,7 @@ export class AddpostComponent implements OnInit {
         
           });
     }
-
+// save the news
     save(newNews:News) {
 
       newNews.image=this.imagePreview;
@@ -43,7 +43,7 @@ export class AddpostComponent implements OnInit {
       this.router.navigate(['/dashboard/news']);
 
     }
-
+// to show thw preview of uploaded image
 
     onFileUpload(event){
       console.log("file upload event trigger")

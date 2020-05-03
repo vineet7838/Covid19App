@@ -17,7 +17,7 @@ export class StatsComponent implements OnInit {
     this.getstats();
 
   }
-
+// get the india level stats
   getstats(){
     this.statsService.getData().subscribe(data => {
       this.saveStatsData(data);
@@ -27,7 +27,7 @@ export class StatsComponent implements OnInit {
 
   }
 
-
+//save the stats into the variable
   saveStatsData(statsData:IStatsData){
     this.statsData=statsData;
   }

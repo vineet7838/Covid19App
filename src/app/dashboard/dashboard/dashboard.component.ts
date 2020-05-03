@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit {
     
     
   }
-
+//To update the log in status of the user
   changeIsLoggedInStatus() {
     this.sharedService.changeIsLoggedInStatus(this.isLoggedIn);
 

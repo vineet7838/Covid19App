@@ -27,6 +27,7 @@ public delta:Delta
     this.getDistrictStats(this.currentState);
   }
 
+  //get district level stats
   getDistrictStats(currentState:string){
    this.districtLevelStatsService.getData().subscribe(data => {
      this.saveData(data,currentState);
@@ -35,10 +36,8 @@ public delta:Delta
     console.log(err);
 }); 
   }
-
-  saveData(allDistrictData:any,currentState:string){
-   
-      
+//save the stats
+  saveData(allDistrictData:any,currentState:string){ 
      for(var state in  allDistrictData){
       
       if(allDistrictData.hasOwnProperty(state)){

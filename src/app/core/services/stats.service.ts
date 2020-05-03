@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IStatsData} from '../../shared/interfaces/IStatsData';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse ,HttpClientModule} from '@angular/common/http';
 import { Observable, of, throwError} from 'rxjs';
 
 const httpOptions = {

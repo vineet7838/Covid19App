@@ -14,7 +14,7 @@ import { AppRoutingModule } from './core/approuting/app-routing.module';
 import { SharedMaterialModule } from './shared/shared-material.module';
 
 import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryNewsDataService } from './core/services/news-in-memory-data.service';
 import { PagenotfoundComponent } from './shared/pagenotfound/pagenotfound.component';
@@ -31,7 +31,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RouterModule,AppRoutingModule,SharedMaterialModule,HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryNewsDataService, {
       passThruUnknownUrl: true}),
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

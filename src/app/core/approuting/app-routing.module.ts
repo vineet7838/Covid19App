@@ -10,6 +10,7 @@ import { DashboardCanActivateGuard } from 'src/app/dashboard/dashboard-can-activ
 import { PrecautionsComponent } from 'src/app/dashboard/precautions/precautions.component';
 import { AddpostComponent } from 'src/app/dashboard/addpost/addpost.component';
 import { PagenotfoundComponent } from 'src/app/shared/pagenotfound/pagenotfound.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 export const routes: Routes = [
@@ -18,11 +19,13 @@ export const routes: Routes = [
   {path:'dashboard', component: DashboardComponent, children: [...dashboardRoutes]},
   {path:'dashboard/addpost',component:AddpostComponent, canActivate: [DashboardCanActivateGuard]},
   {path: '**', component: PagenotfoundComponent, pathMatch: 'full'}
+  
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes),
+    ToastrModule.forRoot(),
           
             DashboardModule
   ],

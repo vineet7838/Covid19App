@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AdminLoginComponent } from './admin-login.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { FormBuilder } from '@angular/forms';
 
 describe('AdminLoginComponent', () => {
   let component: AdminLoginComponent;
@@ -8,6 +10,8 @@ describe('AdminLoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule,FormBuilder
+      ],
       declarations: [ AdminLoginComponent ]
     })
     .compileComponents();

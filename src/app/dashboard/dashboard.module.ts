@@ -12,6 +12,7 @@ import { AddpostComponent } from './addpost/addpost.component';
 import { DashboardCanActivateGuard } from './dashboard-can-activate-guard';
 import { StatsDetailComponent } from './stats-detail/stats-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
 
 
 /**
@@ -22,7 +23,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   declarations: [DashboardComponent, NewsComponent,PrecautionsComponent, StatsComponent, AddpostComponent, StatsDetailComponent],
   imports: [
     CommonModule,
-    DashBoardRoutingModule,NgbModule
+    DashBoardRoutingModule,NgbModule,HttpClientModule
   ],
   exports: [
     DashboardComponent,DashBoardRoutingModule
